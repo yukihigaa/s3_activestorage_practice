@@ -10,14 +10,7 @@
   <%= @tweet.content %>
 </p>
 
-<p>
-  <% if @tweet.images.attached? %>
-    <strong>images:</strong>
-    <% @tweet.images.each do |image| %>
-      <%= image_tag image %> <br>
-    <% end %>
-  <% end %>
-</p>
+<%= render 'images', tweet: @tweet %>
 
 <%= link_to 'Edit', edit_tweet_path(@tweet) %> |
 <%= link_to 'Back', tweets_path %>

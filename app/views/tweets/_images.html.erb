@@ -1,0 +1,8 @@
+<p>
+  <% if @tweet.images.attached? %>
+    <strong>images:</strong><br>
+    <% @tweet.images.each do |image| %>
+      <%= image_tag image.variant(resize: "100x100") %><br>
+    <% end %>
+  <% end %>
+</p>
