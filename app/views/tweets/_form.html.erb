@@ -25,7 +25,7 @@
 
   <div class="field">
     <%= form.label :images %>
-    <%= form.file_field :images, multiple: true %>
+    <%= form.file_field :images, multiple: true, accept: 'image/jpeg,image/png' %>
   </div>
 
   <div class="actions">
